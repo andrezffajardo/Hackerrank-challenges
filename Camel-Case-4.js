@@ -1,4 +1,4 @@
-let string = 'C;C;LargeSoftwareBook';
+let string = 'C;C;coffee machine';
 let i=0;
 let character='';
 let b = " ";
@@ -29,8 +29,20 @@ while (i <= x){
 c = c.toLowerCase();
 }
 
-else if (string.includes('C;V;')) { console.log("yes1");}
+else if (string.includes('C;C;')) {
+  const y = string.slice(4).split(" ");
+  //console.log("yes1");
+  for (let i = 0; i < y.length; i++){
+    y[i] =y[i].charAt(0).toUpperCase() + y[i].slice(1);
+  }
 
-  else if (string.includes('C;C;')) { console.log("yes2");}
+const str2 = y.join('');
+console.log(str2);
+
+  //let str = string.slice(4).split('').filter(e => e.trim().length).join('');
+  //console.log(str);
+}
+
+  else if (string.includes('C;V;')) { console.log("yes2");}
   
     else if (string.includes('C;M;')) { console.log("yes3");}
